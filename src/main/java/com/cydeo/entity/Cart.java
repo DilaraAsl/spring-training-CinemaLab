@@ -17,7 +17,7 @@ public class Cart {
 
 
    // @ManyToMany // it will try to create the foreign key when it cannot it will create a new table
-    @ManyToMany()
+    @ManyToMany
     @JoinTable(name="cart_item_rel",     // third table created by spring rel means relationship
             joinColumns = @JoinColumn(name="c_id"),
             inverseJoinColumns = @JoinColumn(name="i_id"))
