@@ -34,6 +34,9 @@ public class Payment {
 
     @ManyToOne
     private Merchant merchant;
+
+    @ManyToOne // payment many customer one
+    private Customer customer;
     public Payment(LocalDate createdDate, BigDecimal amount, Status paymentStatus) {
         this.createdDate = createdDate;
         this.amount = amount;
